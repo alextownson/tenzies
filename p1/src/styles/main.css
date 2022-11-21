@@ -7,6 +7,7 @@
 
 body {
     background-color: #282D35;
+    overflow-x: hidden;
 }
 
 .nav {
@@ -37,32 +38,40 @@ body {
     color: #DEEBf8;
 }
 
+main {
+    padding: 57px 27px;
+}
+
 .main-title {
-    font-size: 40px;
+    font-size: 39px;
     font-weight: 700;
     color: #DEEBf8;
-    margin: 50px 30px;
+    margin: 0;
 }
 
 .main-list {
     font-size: 16px;
     font-weight: 500;
     color: #DEEBf8;
-    margin-left: 70px;
+    margin-top: 46px;
+    margin-left: 40px;
 }
 
 .main-list > li {
     line-height: 40px;
 }
 
-li::marker {
+.main-list > li::marker {
     color: #61DAFB;
-    font-size: 24px;
+    font-size: 1.4rem;
 }
 
 .main-logo {
-    width: 400px;
+    width: 500px;
     position: absolute;
     top: 50%;
-    left: 50%
+    transform: translate(0, -50%);
+    right: -250px;
+    filter: grayscale(100%);
+    opacity: 0.1;
 }
