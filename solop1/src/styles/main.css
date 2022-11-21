@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: azure;
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+}
+
+
+#root {
+    width: 500px;
+    margin: auto;
+}
+
+.info-headshot {
+    width: 500px;
+    border-radius: 25px 25px 0 0;
+}
+
+.info-text{
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    background-color: #222;
+}
+
+.info-title,
+.info-subtitle,
+.info-link {
+    text-align: center;
+}
+
+.info-subtitle {
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+.info-link {
+    font-size: 10pt;
+    margin-top: 22px;
+}
+
+.info-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.info-buttons > button {
+    margin: 35px 20px;
+    padding: 10px 50px;
+    color: #222;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: orangered;
+}
+
+.about-section {
+    height: fit-content;
+    width: 100%;
+    background-color: #222;
+    padding: 40px 40px;
+}
+
+.about-info {
+    margin-top: 10px;
+}
+
+.interests-section {
+    height: fit-content;
+    width: 100%;
+    background-color: #222;
+    padding: 0px 40px 60px 40px;
+}
+
+.interests-info {
+    margin-top: 10px;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #161616;
+    border-radius: 0 0 25px 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer > a > img {
+    height: 40px;
+}
+
+footer > a > img:hover {
+    cursor: pointer;
+}
