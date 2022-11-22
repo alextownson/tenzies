@@ -1,15 +1,15 @@
 import star from '../assets/star-01.png'
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div className="card">
             <div className="card-image"></div>
             <div className="card-rating">
                 <img className="card-star" src={star} />
-                <p>5.0<span className="grey"> (6) • USA</span></p>
+                <p>{props.rating}<span className="grey"> {props.reviewCount} • {props.country}</span></p>
             </div>
-            <p>Life lessons with Katie Zaferes</p>
-            <p><strong>From $136</strong> / person</p>
+            <p>{props.title}</p>
+            <p><strong>From ${props.price}</strong> / person</p>
         </div>
     )
 }
