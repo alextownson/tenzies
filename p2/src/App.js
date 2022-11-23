@@ -1,19 +1,26 @@
 import Nav from "./components/Nav"
 import Hero from "./components/Hero"
 import Card from "./components/Card"
+import data from "./components/Data"
 
 export default function App() {
+
+    const cards = data.map(x => {
+        return (
+            <Card 
+                key={x.id}
+                {...x}
+            />
+        )
+    })
+
     return (
         <>
             <Nav />
             <Hero />
-            <Card
-                rating="5.0" 
-                reviewCount={`(${6})`} 
-                country="USA" 
-                title="Life Lessons with Katie Zaferes" 
-                price={136} 
-            />
+            <section className='card-list'>
+                {cards}
+            </section>    
         </>
     )
 }
