@@ -13,11 +13,12 @@ export default function App() {
     }
 
     return(
-        <div className='state'>
-            <h1 className='state--title'>Do I feel like going out tonight?</h1>
-            <div className='state--value'>
-                <h1>{answer}</h1>
+        <div className='counter'>
+            <button onClick={subtract} className='counter--minus'>-</button>
+            <div className='counter--count'>
+                <h1>{count}</h1>
             </div>
+            <button onClick={add} className='counter--plus'>+</button>
         </div>
     )
 }
