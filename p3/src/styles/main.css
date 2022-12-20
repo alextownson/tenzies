@@ -66,3 +66,15 @@ button:hover {
     cursor: pointer;
     border: 2px solid lightgray;
 }
+
+.meme--image {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 40px;
+    width: 90vw;
+    height: 25vh;
+    border-radius:10px;
+    background-color: #5F0A87;
+    text-align: center;
+}

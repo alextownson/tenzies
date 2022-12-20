@@ -20,7 +20,7 @@ export default function Meme() {
                 <input type="text" placeholder="Bottom text"/>
                 <button onClick={getMemeImage} type="submit">Get a new meme image 🖼️</button>
             </form>
-            <p>{memeImage}</p>
+            <p className='meme--image'>{memeImage}</p>
         </main>
     )
 }
