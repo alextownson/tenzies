@@ -1,15 +1,16 @@
 import './styles/main.css'
 import ReactDOM from 'react-dom/client'
+import { useState } from 'react'
 
 function App() {
     
-    const thingsArray = ['Thing 1', 'Thing 2']
-    const thingsElements = thingsArray.map(item => <p key={item}>{item}</p>)
+    const [thingsArray, setThingsArray] = useState(['Thing 1', 'Thing 2'])
 
     function addItem() {
-        thingsArray.push('Thing ' + (thingsArray.length + 1))
-        console.log(thingsArray)
+        setThingsArray( (prevThingsArray => [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]) )
     }
+
+    const thingsElements = thingsArray.map((item) => <p key={item}>{item}</p>)
 
     return(
         <>
