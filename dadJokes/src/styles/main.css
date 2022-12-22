@@ -8,7 +8,17 @@
 .joke {
     width: 800px; 
     margin: auto;
-    padding: 20px 20px;
     font-size: 20pt;
     line-height: 35px;
+}
+
+hr {
+    margin: 40px 0px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 25px;
+    background-color: palegreen;
+    cursor: pointer;
 }
