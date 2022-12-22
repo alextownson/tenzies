@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 40px 30px;
+    width: 100%;
+    background-color: lightblue;
+    box-shadow: 0 5px 5px lightgrey;
+}
+
+section {
+    padding: 40px 30px;
+}
