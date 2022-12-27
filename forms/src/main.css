@@ -1,0 +1,19 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+}
+
+input {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16pt;
+}
