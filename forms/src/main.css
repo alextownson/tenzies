@@ -5,15 +5,61 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form {
+body {
+    margin: 0;
     padding: 20px;
-    display: flex;
-    flex-flow: column;
-    width: fit-content;
 }
 
 input {
-    margin: 20px;
-    padding: 10px 20px;
-    font-size: 16pt;
+    margin-bottom: 15px;
+    height: 30px;
+    text-indent: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: block;
+}
+
+textarea {
+    margin-bottom: 15px;
+    height: 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: block;
+}
+
+label,
+#isFriendly {
+    display: inline;
+    margin: 0;
+    vertical-align: middle;
+}
+
+label {
+    margin-left: 15px;
+}
+
+fieldset {
+    margin: 20px 0;
+}
+
+#unemployed,
+#part-time,
+#full-time {
+    margin: 0 0 0 10px;
+    display: inline;
+    vertical-align: middle;
+
+}
+
+#favColourLabel {
+    margin: 0;
+}
+
+select {
+    margin-top: 10PX;
+}
+
+#submitButton {
+    text-indent: 0;
+    padding: 0 15px;
 }
