@@ -78,3 +78,16 @@ button:hover {
     background-color: #5F0A87;
     text-align: center;
 }
+
+#memeTopText,
+#memeBottomText
+{
+    color: white;
+}
+
+#memeBottomText {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+}
