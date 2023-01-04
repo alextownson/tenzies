@@ -1,0 +1,30 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: orangered;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 50px;
+}
+
+h1 {
+    color: white;
+    margin: 40px;
+}
+
+button {
+    padding: 20px 50px;
+    font-size: 14pt;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
