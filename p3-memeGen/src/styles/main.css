@@ -67,27 +67,33 @@ button:hover {
     border: 2px solid lightgray;
 }
 
+.meme {
+    position: relative;
+    margin: 40px auto;
+    width: fit-content;
+}
+
 .meme--image {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    margin-top: 40px;
-    width: 90vw;
-    height: 25vh;
-    border-radius:10px;
-    background-color: #5F0A87;
-    text-align: center;
+    max-width: 100%;
 }
 
 #memeTopText,
 #memeBottomText
 {
+    left: 50%;
+    transform: translate(-50%);
     color: white;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+#memeTopText {
+    position: absolute;
+    top: 0px;
 }
 
 #memeBottomText {
     position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translate(-50%);
+    bottom: 0px;
 }

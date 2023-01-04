@@ -6,16 +6,22 @@ export default function Meme() {
     const [memeData, setMemeData] = React.useState({
         topText: "",
         bottomText: "",
-        randomImg: ""
+        randomImg: "http://i.imgflip.com/1bij.jpg"
     })
 
-    const [allMemeImages, setAllMemeImages] = React.useState(memesData)
+
+    const [allMemes, setAllMemes] = React.useState([])
+
+    React.useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+    }, [])    
 
     function getMemeData(e) {
         e.preventDefault();
-        const memesArray = allMemeImages.data.memes
-        const randomNumber = Math.floor(Math.random()*memesArray.length)
-        const url = memesArray[randomNumber].url
+        const randomNumber = Math.floor(Math.random()*allMemes.length)
+        const url = allMemes[randomNumber].url
         setMemeData((prevData) => {
             return {
                 ...prevData, 
@@ -23,6 +29,7 @@ export default function Meme() {
             }
         })
     }
+
     
     function handleChange(event) {
 
@@ -55,9 +62,9 @@ export default function Meme() {
                 />
                 <button onClick={getMemeData} type="submit">Get a new meme image 🖼️</button>
             </form>
-            <div className='meme--image'>
+            <div className='meme'>
+                <img id='meme--image' src={memeData.randomImg} />
                 <h1 id='memeTopText'>{memeData.topText}</h1>
-                <p >{memeData.randomImg}</p>
                 <h1 id='memeBottomText'>{memeData.bottomText}</h1>
             </div>
         </main>
