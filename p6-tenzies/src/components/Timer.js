@@ -24,7 +24,6 @@ export default function Timer(props) {
                 }
                 )
             )
-            console.log(time)
         }
         return () => clearInterval(interval)
     }, [props.tenzies])

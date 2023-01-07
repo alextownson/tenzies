@@ -65,22 +65,22 @@ export default function App() {
         )
     }
 
-
     return (
-        <main>
-            {tenzies && <Confetti />}
-            <h1 className="title">TENZIES</h1>
-            <div className='HUD'>
-                <Timer tenzies={tenzies}/>
-                <p className='roll-tracker'>Current rolls: {rolls}</p>
-                <p className='roll-score'>Best rolls: {rollScore < 1000 ? rollScore : 'N/A'}</p>
-            </div>
-            
-            <div className='die-container'>
-            {dice.map((die) => <Die hold={() => hold(die.id)} key={die.id} value={die.value} isHeld={die.isHeld}/>)}
-            </div>
-            <button className='roll-dice' onClick={rollDice}>{tenzies ? 'New Game' : 'Roll'}</button>
-            <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
-        </main>
+        <>
+            {tenzies && <Confetti className='confetti'/>}
+            <main>
+                <h1 className="title">TENZIES</h1>
+                <div className='HUD'>
+                    <Timer tenzies={tenzies}/>
+                    <p className='roll-tracker'>Current rolls: {rolls}</p>
+                    <p className='roll-score'>Best rolls: {rollScore < 1000 ? rollScore : 'N/A'}</p>
+                </div>
+                <div className='die-container'>
+                {dice.map((die) => <Die hold={() => hold(die.id)} key={die.id} value={die.value} isHeld={die.isHeld}/>)}
+                </div>
+                <button className='roll-dice' onClick={rollDice}>{tenzies ? 'New Game' : 'Roll'}</button>
+                <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+            </main>
+        </>
     )
 }
