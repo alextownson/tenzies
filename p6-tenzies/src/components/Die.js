@@ -1,4 +1,5 @@
 import React from 'react'
+import Dot from './Dot'
 
 export default function Die(props) {
 
@@ -8,7 +9,7 @@ export default function Die(props) {
 
     return (
         <div onClick={props.hold} className='die' style={styles}>
-            <h2>{props.value}</h2>
+            <Dot value={props.value} />
         </div>
     )
 }
