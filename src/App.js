@@ -72,8 +72,8 @@ export default function App() {
                 <h1 className="title">TENZIES</h1>
                 <div className='HUD'>
                     <Timer tenzies={tenzies}/>
-                    <p className='roll-tracker'>Current rolls: {rolls}</p>
-                    <p className='roll-score'>Best rolls: {rollScore < 1000 ? rollScore : 'N/A'}</p>
+                    <p className='hud-info' id='roll-tracker'>Rolls: {rolls}</p>
+                    <p className='hud-info' id='roll-score'>Best rolls: {rollScore < 1000 ? rollScore : 'N/A'}</p>
                 </div>
                 <div className='die-container'>
                 {dice.map((die) => <Die hold={() => hold(die.id)} key={die.id} value={die.value} isHeld={die.isHeld}/>)}

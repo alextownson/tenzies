@@ -34,8 +34,8 @@ export default function Timer(props) {
 
     return (
         <>
-            <p className='timer'>Current time: {("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</p> 
-            {lowestTime.data ? <p className='best-time'>Best time: {("0" + Math.floor((lowestTime.score / 60000) % 60)).slice(-2)}:{("0" + Math.floor((lowestTime.score / 1000) % 60)).slice(-2)}</p> : <p className='best-time'>Best time: N/A</p> }
+            <p className='hud-info' id='time'>Time: {("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</p> 
+            {lowestTime.data ? <p className='hud-info' id='best-time'>Best time: {("0" + Math.floor((lowestTime.score / 60000) % 60)).slice(-2)}:{("0" + Math.floor((lowestTime.score / 1000) % 60)).slice(-2)}</p> : <p className='best-time'>Best time: N/A</p> }
         </>
     )
 }

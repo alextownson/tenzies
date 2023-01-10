@@ -11,19 +11,18 @@ body {
 }
 
 main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
     background-color: #F5f5f5;
-    height: 800px;
-    width: 800px;
+    min-height: 600px;
+    height: calc(100vh - 40px);
+    width: calc(100vw - 40px);
+    max-width: 800px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 20px 0 0 0;
+    padding: 20px 20px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
 }
 
@@ -35,15 +34,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16pt;
     border-radius: 5px;
     cursor: pointer;
+    margin: 20px;
 }
 
 .die-container {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(5,1fr);
-    grid-gap: 40px 69px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 700px;
 }
 
 .roll-dice {
@@ -87,7 +87,7 @@ main {
 }
 
 .two > .dot {
-    margin: 50px;
+    margin: 30px;
 }
 
 
@@ -144,20 +144,21 @@ main {
 }
 
 .HUD {
-    width: 700px;
+    width: 90%;
     height: 50px;
     background-color: white;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     color:#5035FF;
     border-radius: 5px;
     font-weight: bold;
+    padding: 10px;
 }
 
-.roll-tracker,
-.timer {
+#roll-tracker,
+#time {
     color: black;
 }
 
@@ -168,3 +169,40 @@ main {
     width: 100vw;
     height: 100vh;
 }
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        padding: 0px;
+        background-color: #F5f5f5;
+    }
+
+    main {
+        border-radius: 0;
+        width: 100vw;
+        height: calc(100vh - 100px);
+        padding-top: 10px;
+        box-shadow: none;
+    }
+
+    .HUD {
+        width: 100%;
+        font-size: 8pt;
+        justify-content: space-between;
+    }
+
+    .die {
+        margin: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .instructions {
+        font-size: 8pt;
+    }
+
+    .title {
+        font-size: 24pt;
+    }
+    
+  }
